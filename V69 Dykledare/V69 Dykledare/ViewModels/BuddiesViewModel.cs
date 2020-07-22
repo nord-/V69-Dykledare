@@ -22,6 +22,9 @@ namespace V69_Dykledare.ViewModels
         }
 
         public ObservableCollection<Buddy> Buddies { get; set; }
+        public Buddy SelectedBuddy { get; set; }
+
+        public bool BuddyIsSelected => SelectedBuddy != null;
 
         public RelayCommand<Buddy> StartStopCommand => _startStopCommand ?? new RelayCommand<Buddy>(async b => await StartStopBuddy(b));
 
