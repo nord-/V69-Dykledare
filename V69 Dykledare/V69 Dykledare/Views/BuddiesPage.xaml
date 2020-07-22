@@ -7,6 +7,10 @@
              xmlns:models="clr-namespace:V69_Dykledare.Models;assembly=V69 Dykledare"
              mc:Ignorable="d" BackgroundColor="{StaticResource BackgroundColor}"
              x:Class="V69_Dykledare.Views.BuddiesPage" x:DataType="vm:BuddiesViewModel">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lägg till"  />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -57,7 +61,7 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                     <CollectionView.EmptyView>
-                        <Label Text="Add your first Buddy Pair using the button above." LineBreakMode="WordWrap"
+                        <Label Text="Lägg till det första dykparet med knappen ovan." LineBreakMode="WordWrap"
                                Style="{StaticResource ListItemFirstLine}"/>
                     </CollectionView.EmptyView>
                 </CollectionView>
