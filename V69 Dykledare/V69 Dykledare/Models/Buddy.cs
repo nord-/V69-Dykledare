@@ -26,7 +26,16 @@ namespace V69_Dykledare.Models
         public bool DiveActive => DiveStart.HasValue && !DiveEnd.HasValue;
         public bool DiveOvertime => (TimeRemainingTimeSpan?.TotalSeconds ?? 0) < 0;
 
-        private TimeSpan? TimeRemainingTimeSpan => PredictedDiveEnd.HasValue ? PredictedDiveEnd - DateTime.Now : null;
+        private TimeSpan? TimeRemainingTimeSpan
+        {
+            get
+            {
+                if (DiveEnd.HasValue)
+                    return DiveEnd.Value - DiveStart.Value;
+
+                return PredictedDiveEnd.HasValue ? PredictedDiveEnd - DateTime.Now : null;
+            }
+        }
 
         public string TimeRemaining
         {
