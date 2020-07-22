@@ -4,7 +4,7 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            xmlns:views="clr-namespace:V69_Dykledare.Views"
+            xmlns:views="clr-namespace:V69_Dykledare.Views;assembly=V69 Dykledare"
             x:Class="V69_Dykledare.Views.MainPage">
 
     <TabbedPage.Children>
@@ -15,7 +15,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>-->
             <x:Arguments>
-                <views:ItemsPage />
+                <views:BuddiesPage />
             </x:Arguments>
         </NavigationPage>
 

@@ -3,12 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <AssemblyName>V69 Dykledare</AssemblyName>
+    <RootNamespace>V69_Dykledare</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Franklin Gothic Condensed.ttf" />
+    <None Remove="Fonts\FranklinGothic.ttf" />
+    <None Remove="Fonts\FranklinGothicITALIC.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Franklin Gothic Condensed.ttf" />
+    <EmbeddedResource Include="Fonts\FranklinGothic.ttf" />
+    <EmbeddedResource Include="Fonts\FranklinGothicITALIC.ttf" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.446" />
@@ -18,5 +32,11 @@
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
     <PackageReference Include="Xamarin.Forms" Version="4.7.0.1142" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\BuddiesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
