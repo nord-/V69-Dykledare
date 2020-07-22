@@ -19,6 +19,8 @@ namespace V69_Dykledare.Models
         [AlsoNotifyFor(nameof(TimeRemaining), nameof(TimeOvertimeColor))]
         public DateTime CurrentTime { get; set; }
 
+        public Color ItemBackgroundColor { get; set; }
+
         public string FirstDiver => Divers.FirstOrDefault()?.Name;
         public string BuddiesList => string.Join(", ", Divers.Select(d => d.Name));
         public string TimeAndDepth => $"{MaxDepth}m / {MaxTime} min";

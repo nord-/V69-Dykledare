@@ -22,6 +22,7 @@ namespace V69_Dykledare.ViewModels
         }
 
         public ObservableCollection<Buddy> Buddies { get; set; }
+        [AlsoNotifyFor(nameof(BuddyIsSelected))]
         public Buddy SelectedBuddy { get; set; }
 
         public bool BuddyIsSelected => SelectedBuddy != null;

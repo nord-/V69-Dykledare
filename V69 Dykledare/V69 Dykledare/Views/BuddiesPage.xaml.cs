@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using V69_Dykledare.Models;
 using V69_Dykledare.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace V69_Dykledare.Views
@@ -37,7 +39,7 @@ namespace V69_Dykledare.Views
                                                                      }
                                                                  });
 
-            
+
         }
     }
 }

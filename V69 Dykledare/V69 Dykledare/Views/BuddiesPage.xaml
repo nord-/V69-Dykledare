@@ -21,7 +21,8 @@
 
             <Label Text="Dykpar" HorizontalOptions="Center" Style="{StaticResource TitleLabel}" />
             <Frame Grid.Row="1" Margin="10,0,10,10" BackgroundColor="#70FFFFFF" CornerRadius="20" Padding="15">
-                <CollectionView ItemsSource="{Binding Buddies}" SelectedItem="{Binding SelectedBuddy}">
+                <CollectionView ItemsSource="{Binding Buddies}" SelectedItem="{Binding SelectedBuddy}"
+                                SelectionMode="Single">
                     <d:CollectionView.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>First Diver</x:String>
