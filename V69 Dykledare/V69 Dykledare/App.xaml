@@ -46,7 +46,7 @@
             </Style>
 
             <Style TargetType="Label" x:Key="ListItemSecondLine">
-                <Setter Property="FontFamily" Value="{StaticResource CondensedFontFamily}"/>
+                <!--<Setter Property="FontFamily" Value="{StaticResource ItalicFontFamily}"/>-->
                 <Setter Property="FontSize" Value="{StaticResource StandardFontSize}"/>
                 <Setter Property="LineBreakMode" Value="TailTruncation"/>
                 <Setter Property="FontAttributes" Value="Italic"/>

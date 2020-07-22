@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using V69_Dykledare.Services;
+using V69_Dykledare.ViewModels;
 using V69_Dykledare.Views;
 
 namespace V69_Dykledare
@@ -13,7 +14,8 @@ namespace V69_Dykledare
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
+            DependencyService.Register<BuddiesViewModel>();
             MainPage = new MainPage();
         }
 
